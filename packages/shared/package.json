@@ -1,0 +1,8 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "A collection of shared types and utilities for the monorepo.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "minimal-react",
+  "version": "0.0.1",
+  "description": "A minimal viable prototype of how React is implemented",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "rimraf dist && rollup --bundleConfigAsCjs -c scripts/rollup/react.config.js",
+    "commit": "git-cz",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx --fix --quiet ./packages",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Shaun Li",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --cache --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --cache --parser=typescript --write"
+    ]
+  },
+  "devDependencies": {
+    "commitizen": "4.3.0",
+    "cz-git": "1.9.4",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@rollup/plugin-commonjs": "23.0.0",
+    "@typescript-eslint/eslint-plugin": "8.4.0",
+    "@typescript-eslint/parser": "8.4.0",
+    "commitlint": "19.4.1",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "9.1.5",
+    "prettier": "3.3.2",
+    "rimraf": "3.0.2",
+    "rollup": "4.21.2",
+    "rollup-plugin-generate-package-json": "3.2.0",
+		"rollup-plugin-typescript2": "0.34.1",
+    "typescript": "5.5.4"
+  }
+}
